@@ -1,3 +1,27 @@
+<div id="aiButton" onclick="openChat()">
+    🤖
+</div>
+
+<div id="chatContainer">
+
+<div class="chatHeader">
+    Voxi AI Assistant
+    <span onclick="closeChat()">×</span>
+</div>
+
+<div id="chatBox">
+<p><b>Voxi AI:</b> Hello! Ask me about Voxistar.</p>
+</div>
+
+<div class="chatInput">
+<input id="userInput" placeholder="Ask about Voxistar...">
+<button onclick="sendMessage()">Send</button>
+</div>
+
+</div>
+
+
+<script src="chatbot.js"></script>
 function sendMessage() {
 
 let input = document.getElementById("userInput").value.toLowerCase();
