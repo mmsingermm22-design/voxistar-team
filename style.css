@@ -1,0 +1,39 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#12002b,#3b0a70);
+    color: white;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #00e5ff;
+}
+
+.highlight {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #ffd700;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #eeeeee;
+}
+
+a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
