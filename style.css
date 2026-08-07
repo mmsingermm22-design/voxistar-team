@@ -37,3 +37,85 @@ a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
+#aiButton {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(135deg,#00e5ff,#0066ff);
+    border-radius: 50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    cursor:pointer;
+    box-shadow:0 0 20px #00e5ff;
+    z-index:9999;
+}
+
+
+#chatContainer {
+    display:none;
+    position:fixed;
+    right:20px;
+    bottom:95px;
+    width:330px;
+    height:450px;
+    background:#111;
+    border-radius:20px;
+    box-shadow:0 0 30px #00e5ff;
+    z-index:9999;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+}
+
+
+.chatHeader {
+    background:linear-gradient(90deg,#00e5ff,#6a00ff);
+    padding:18px;
+    font-family:'Montserrat',sans-serif;
+    font-weight:800;
+    font-size:20px;
+    color:white;
+}
+
+.chatHeader span {
+    float:right;
+    cursor:pointer;
+}
+
+
+#chatBox {
+    height:310px;
+    overflow-y:auto;
+    padding:15px;
+    color:white;
+    font-family:'Poppins',sans-serif;
+    font-size:15px;
+    line-height:1.6;
+}
+
+
+.chatInput {
+    display:flex;
+    padding:10px;
+    gap:8px;
+}
+
+
+.chatInput input {
+    flex:1;
+    padding:12px;
+    border-radius:10px;
+    border:none;
+}
+
+
+.chatInput button {
+    background:#00e5ff;
+    border:none;
+    padding:10px 15px;
+    border-radius:10px;
+    font-weight:bold;
+}
