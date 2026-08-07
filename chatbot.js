@@ -137,3 +137,40 @@ document.getElementById("messages").innerHTML +=
 document.getElementById("userMessage").value="";
 
 }
+function sendMessage(){
+
+let input=document.getElementById("userInput").value.toLowerCase();
+
+let reply="Sorry, I can only answer questions related to Voxistar, its app, founder, team, and support.";
+
+if(input.includes("founder") || input.includes("owner")){
+reply="The founder of Voxistar is Mukesh Heerani. He is from Hyderabad, Sindh, Pakistan. His vision is to build a modern platform where creators and talent can grow and get better opportunities.";
+}
+
+else if(input.includes("voxistar") || input.includes("app")){
+reply="Voxistar is a modern creator and talent platform that combines social entertainment, creator networking, and talent growth features. It is designed to connect creators and audiences in one place.";
+}
+
+else if(input.includes("team") || input.includes("official")){
+reply="Voxistar has a management team that works globally. Official representatives may be available in different countries, while the main management team handles overall operations.";
+}
+
+else if(input.includes("account") || input.includes("hack") || input.includes("security") || input.includes("delete")){
+reply="If your Voxistar account has been deleted, hacked, or you are facing a security issue, please contact the official Voxistar support team. Avoid sharing your password and personal information with anyone.";
+}
+
+else if(input.includes("support") || input.includes("help")){
+reply="For official support and assistance, please contact Voxistar Management through the official contact channels available on the website.";
+}
+
+else if(input.includes("starmaker") || input.includes("tiktok") || input.includes("instagram")){
+reply="Voxistar is inspired by the creator experience of platforms like StarMaker, TikTok, and Instagram, bringing social connection, creativity, and talent discovery together in one platform.";
+}
+
+
+document.getElementById("chatBox").innerHTML +=
+"<p><b>You:</b> "+input+"</p>"+
+"<p><b>Voxi AI:</b> "+reply+"</p>";
+
+document.getElementById("userInput").value="";
+    }
