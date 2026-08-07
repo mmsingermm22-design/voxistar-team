@@ -129,7 +129,7 @@ reply =
 
 
 
-document.getElementById("messages").innerHTML +=
+document.getElementById("ChatBox").innerHTML +=
 "<p><b>You:</b> "+input+"</p>"+
 "<p><b>Voxi AI:</b> "+reply+"</p>";
 
