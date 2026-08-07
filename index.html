@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<div id="aiButton" onclick="openChat()">🤖</div>
 
-<head>
-<title>Voxistar | Official Website</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
+<div id="chatWindow">
+    <div class="chatHeader">
+        Voxi AI
+        <span onclick="closeChat()">✖</span>
+    </div>
 
-<body>
+    <div id="chatMessages">
+        <p><b>Voxi AI:</b> Hello! How can I help you?</p>
+    </div>
 
-<div id="aiButton">🤖</div>
+    <div class="chatInput">
+        <input id="userInput" placeholder="Ask about Voxistar...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
 
-<div id="chatContainer">
-  <div id="chatBox">
-    <p><b>Voxi AI:</b> Hello! Ask me anything about Voxistar.</p>
-  </div>
-
-  <div class="chatInput">
+<script src="js/chatbot.js"></script>
+<div class="chatInput">
     <input id="userInput" placeholder="Ask about Voxistar...">
     <button onclick="sendMessage()">Send</button>
   </div>
