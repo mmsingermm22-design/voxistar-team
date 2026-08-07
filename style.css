@@ -220,3 +220,13 @@ button {
 button:hover {
     background: #7e22ce;
 }
+.logo img {
+    width: 120px;
+    height: 120px;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
