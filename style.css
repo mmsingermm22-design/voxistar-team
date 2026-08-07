@@ -219,14 +219,22 @@ button {
 
 button:hover {
     background: #7e22ce;
-}
-.logo img {
-    width: 120px;
-    height: 120px;
+
 }
 
 .logo {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    font-size: 28px;
 }
