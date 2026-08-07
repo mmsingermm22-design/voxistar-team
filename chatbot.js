@@ -134,6 +134,6 @@ document.getElementById("messages").innerHTML +=
 "<p><b>Voxi AI:</b> "+reply+"</p>";
 
 
-document.getElementById("userMessage").value="";
+document.getElementById("userInput").value="";
 
 }
