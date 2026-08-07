@@ -9,7 +9,7 @@ function closeChat(){
 
 function sendMessage(){
 
-let input = document.getElementById("userMessage").value.toLowerCase();
+let input = document.getElementById("userInput").value.toLowerCase();
 
 let reply = "";
 
