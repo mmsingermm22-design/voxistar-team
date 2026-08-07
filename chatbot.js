@@ -1,132 +1,139 @@
-<div id="aiButton" onclick="openChat()">
-    🤖
-</div>
+function openChat(){
+    document.getElementById("chatWindow").style.display="block";
+}
 
-<div id="chatContainer">
-
-<div class="chatHeader">
-    Voxi AI Assistant
-    <span onclick="closeChat()">×</span>
-</div>
-
-<div id="chatBox">
-<p><b>Voxi AI:</b> Hello! Ask me about Voxistar.</p>
-</div>
-
-<div class="chatInput">
-<input id="userInput" placeholder="Ask about Voxistar...">
-<button onclick="sendMessage()">Send</button>
-</div>
-
-</div>
+function closeChat(){
+    document.getElementById("chatWindow").style.display="none";
+}
 
 
-<script src="chatbot.js"></script>
-function sendMessage() {
+function sendMessage(){
 
-let input = document.getElementById("userInput").value.toLowerCase();
-let chat = document.getElementById("chatBox");
-
-chat.innerHTML += `<p><b>You:</b> ${input}</p>`;
+let input = document.getElementById("userMessage").value.toLowerCase();
 
 let reply = "";
 
 
-if(input.includes("voxistar") || input.includes("app")) {
-
-reply = `
-Voxistar is a modern creator and talent management platform.
-It combines the experience of platforms like StarMaker, TikTok, and Instagram
-into one connected ecosystem where creators can showcase talent,
-build communities, and grow professionally.
-`;
-
+/* Founder */
+if(
+input.includes("founder") ||
+input.includes("owner") ||
+input.includes("ceo")
+){
+reply =
+"Voxistar ke founder Mukesh Heerani hain. Woh Hyderabad, Sindh, Pakistan se hain. Unka vision ek aisa platform banana hai jahan creators aur talent ko grow karne ke opportunities mil sakein.";
 }
 
 
-else if(input.includes("founder") || input.includes("owner") || input.includes("created")) {
-
-reply = `
-The founder of Voxistar is Mukesh Heerani.
-He is from Hyderabad, Sindh, Pakistan and is working towards building
-a professional platform for creators, talent, and digital communities.
-`;
-
+/* About Voxistar */
+else if(
+input.includes("voxistar") ||
+input.includes("app") ||
+input.includes("what is voxistar")
+){
+reply =
+"Voxistar ek modern creator and talent management platform hai. Iska purpose creators ko connect karna, talent ko support karna aur digital entertainment experience ko improve karna hai.";
 }
 
 
-else if(input.includes("team") || input.includes("official")) {
-
-reply = `
-Voxistar has an official management team responsible for operations,
-growth, and platform development.
-
-Voxistar officials are available in different countries to support
-their local communities, while the main management team handles
-the overall platform direction.
-`;
-
+/* App Features */
+else if(
+input.includes("feature") ||
+input.includes("use") ||
+input.includes("work")
+){
+reply =
+"Voxistar creators, users aur talent community ke liye ek organized platform provide karta hai jahan entertainment, creativity aur management tools ko ek jagah laya jata hai.";
 }
 
 
-else if(input.includes("feature") || input.includes("service")) {
-
-reply = `
-Voxistar focuses on:
-• Creator and talent management
-• Digital community building
-• Content and entertainment support
-• Professional growth opportunities
-• Connecting creators worldwide
-`;
-
+/* Official Team */
+else if(
+input.includes("team") ||
+input.includes("official")
+){
+reply =
+"Voxistar ki official management team global level par kaam karti hai. Different countries me local officials ho sakte hain, jabke main management team platform operations ko handle karti hai.";
 }
 
 
-else if(input.includes("mission") || input.includes("vision")) {
-
-reply = `
-Voxistar's mission is to create a global platform where creators,
-talents, and communities can connect, grow, and achieve success
-through technology and teamwork.
-`;
-
+/* Account Delete */
+else if(
+input.includes("delete") ||
+input.includes("removed") ||
+input.includes("ban")
+){
+reply =
+"Agar kisi user ki Voxistar ID delete, disabled ya restricted ho gayi hai to user ko apni account details verify karni chahiye aur official Voxistar support team se contact karna chahiye.";
 }
 
 
-else if(input.includes("contact") || input.includes("email")) {
-
-reply = `
-You can contact Voxistar officially through:
-voxistarmanagement@gmail.com
-`;
-
+/* Hack Security */
+else if(
+input.includes("hack") ||
+input.includes("security") ||
+input.includes("stolen")
+){
+reply =
+"Agar account security issue ya hacking ka doubt ho to password change karein, apni personal information share na karein aur official Voxistar support channel ke through help lein.";
 }
 
 
-else if(input.includes("assistant") || input.includes("name")) {
-
-reply = `
-I am Voxistar Assistant, the official virtual assistant of Voxistar.
-I can help you with information about Voxistar, its app, team,
-services, and official details.
-`;
-
+/* Login */
+else if(
+input.includes("login") ||
+input.includes("password") ||
+input.includes("otp")
+){
+reply =
+"Login problem ke liye account recovery options check karein. OTP ya password kisi ke sath share na karein. Zaroorat par official support team se contact karein.";
 }
 
 
-else {
-
-reply = `
-Sorry, I can only answer questions related to Voxistar,
-Voxistar app, official team, founder, and services.
-`;
-
+/* Support */
+else if(
+input.includes("contact") ||
+input.includes("help") ||
+input.includes("support")
+){
+reply =
+"Voxistar support ke liye official contact channels use karein. Team users ke questions aur platform related issues ko resolve karne me madad karti hai.";
 }
 
 
-chat.innerHTML += `<p><b>Voxistar Assistant:</b> ${reply}</p>`;
+/* Privacy */
+else if(
+input.includes("privacy") ||
+input.includes("data")
+){
+reply =
+"Voxistar users ki privacy aur data protection ko important samajhta hai. Users ko apni personal information secure rakhni chahiye.";
+}
 
-document.getElementById("userInput").value = "";
+
+/* Greeting */
+else if(
+input.includes("hello") ||
+input.includes("hi")
+){
+reply =
+"Hello! Main Voxi AI Assistant hoon. Aap Voxistar app, founder, team ya support se related questions pooch sakte hain.";
+}
+
+
+/* Other */
+else{
+reply =
+"Main Voxi AI Assistant hoon. Main sirf Voxistar app, founder, official team, account security aur support se related questions ka jawab de sakta hoon.";
+}
+
+
+
+document.getElementById("messages").innerHTML +=
+"<p><b>You:</b> "+input+"</p>"+
+"<p><b>Voxi AI:</b> "+reply+"</p>";
+
+
+document.getElementById("userMessage").value="";
 
 }
