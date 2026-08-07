@@ -1,3 +1,58 @@
+<div id="chatContainer">
+
+<h3>Voxi AI Assistant</h3>
+
+<div id="chatBox">
+<p><b>Voxi AI:</b> Hello! Ask me anything about Voxistar.</p>
+</div>
+
+<input id="userInput" placeholder="Ask about Voxistar...">
+
+<button onclick="sendMessage()">Send</button>
+
+</div>
+
+
+<style>
+
+#chatContainer {
+position: fixed;
+right: 20px;
+bottom: 20px;
+width: 300px;
+background:#111;
+color:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 0 20px #00e5ff;
+font-family:Arial;
+}
+
+#chatBox {
+height:200px;
+overflow:auto;
+background:#222;
+padding:10px;
+border-radius:10px;
+}
+
+#userInput {
+width:70%;
+padding:8px;
+margin-top:10px;
+}
+
+button {
+padding:8px;
+background:#00e5ff;
+border:none;
+cursor:pointer;
+}
+
+</style>
+
+
+<script src="chatbot.js"></script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
