@@ -1,24 +1,21 @@
-<div id="aiButton" onclick="openChat()">
-    🤖
+<!-- Voxi AI Button -->
+<div id="aiButton">🤖</div>
+
+<!-- Voxi AI Chat -->
+<div id="chatContainer">
+
+<div class="chatHeader">
+Voxi AI Assistant
+<span onclick="closeChat()">×</span>
 </div>
 
-<div id="chatWindow">
-
-<div class="chatTop">
-    Voxi AI Assistant
-    <span onclick="closeChat()">×</span>
+<div id="chatBox">
+<p><b>Voxi AI:</b> Hello! Ask me anything about Voxistar.</p>
 </div>
 
-<div id="messages">
-    <p><b>Voxi AI:</b> Hello! Ask me about Voxistar.</p>
-</div>
-
-<div class="chatBottom">
-<input id="userMessage" placeholder="Ask about Voxistar...">
-
-<button onclick="sendMessage()">
-Send
-</button>
+<div class="chatInput">
+<input id="userInput" placeholder="Ask about Voxistar...">
+<button onclick="sendMessage()">Send</button>
 </div>
 
 </div>
