@@ -1,1 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Voxistar Officials | Leadership & Management</title>
+
+  <meta name="description"
+    content="Meet the Voxistar officials, leadership and management team behind the platform's vision, operations, community and development.">
+
+  <link rel="icon" href="../logo.png">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #070a12;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(7, 10, 18, 0.96);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+    }
+
+    .back-btn {
+      padding: 10px 18px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 30px;
+      color: #dce8ff;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background: #fff;
+      color: #070a12;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 90px 0 70px;
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(0, 210, 255, 0.18),
+          transparent 40%
+        ),
+        radial-gradient(
+          circle at 85% 25%,
+          rgba(255, 0, 180, 0.12),
+          transparent 32%
+        );
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 17px;
+      border-radius: 30px;
+      border: 1px solid rgba(0, 210, 255, 0.35);
+      color: #63dcff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 8vw, 78px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -2px;
+
+      background: linear-gradient(
+        90deg,
+        #ffffff,
+        #5cddff,
+        #ff63d7
+      );
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: 24px auto 0;
+      color: #aeb8ca;
+      font-size: 17px;
+    }
+
+    /* SECTION */
+
+    .officials {
+      padding: 45px 0 100px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #8f9aad;
+    }
+
+    /* OFFICIAL CARDS */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      overflow: hidden;
+      border-radius: 22px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(25, 32, 49, 0.98),
+          rgba(10, 14, 25, 0.98)
+        );
+
+      border: 1px solid rgba(255,255,255,0.09);
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(91, 217, 255, 0.45);
+    }
+
+    /* PHOTO */
+
+    .photo-box {
+      width: 100%;
+      height: 280px;
+      overflow: hidden;
+      background:
+        radial-gradient(
+          circle,
+          rgba(0, 200, 255, 0.20),
+          rgba(10, 14, 25, 1)
+        );
+    }
+
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover .photo-box img {
+      transform: scale(1.04);
+    }
+
+    .card-content {
+      padding: 25px;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    .role {
+      color: #5edcff;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #9da8bb;
+      font-size: 14px;
+    }
+
+    /* MANAGEMENT */
+
+    .management-section {
+      padding: 20px 0 100px;
+    }
+
+    .management-box {
+      padding: 45px 30px;
+      border-radius: 24px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(20, 28, 46, 0.95),
+          rgba(8, 12, 22, 0.98)
+        );
+
+      border: 1px solid rgba(255,255,255,0.09);
+    }
+
+    .management-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .management-title h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .management-title p {
+      color: #8f9aad;
+    }
+
+    .management-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .management-card {
+      padding: 23px;
+      border-radius: 17px;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .management-card h3 {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+
+    .management-card p {
+      color: #9da8bb;
+      font-size: 14px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 35px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+      color: #727d91;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .nav-inner {
+        min-height: 64px;
+      }
+
+      .brand {
+        font-size: 17px;
+      }
+
+      .brand img {
+        width: 36px;
+        height: 36px;
+      }
+
+      .back-btn {
+        padding: 8px 13px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 65px 0 50px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-box {
+        height: 310px;
+      }
+
+      .management-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .management-box {
+        padding: 35px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="container nav-inner">
+
+      <a href="../index.html" class="brand">
+        <img src="../logo.png" alt="Voxistar Logo">
+        <span>VOXISTAR</span>
+      </a>
+
+      <a href="../index.html" class="back-btn">
+        ← Back to Website
+      </a>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="container">
+
+      <span class="badge">
+        Official Leadership
+      </span>
+
+      <h1>
+        Voxistar Officials
+      </h1>
+
+      <p>
+        Meet the leadership and official management team
+        contributing to Voxistar's vision, operations,
+        community and continued development.
+      </p>
+
+    </div>
+
+  </header>
+
+
+  <!-- MAIN OFFICIALS -->
+
+  <main class="officials">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>
+          Leadership & Officials
+        </h2>
+
+        <p>
+          The people behind the Voxistar vision.
+        </p>
+
+      </div>
+
+
+      <div class="grid">
+
+
+        <!-- MUKESH -->
+
+        <article class="card">
+
+          <div class="photo-box">
+            <img
+              src="images/mukesh-heerani.jpg"
+              alt="Mukesh Heerani - Founder and CEO of Voxistar"
+            >
+          </div>
+
+          <div class="card-content">
+
+            <h3>
+              Mukesh Heerani
+            </h3>
+
+            <div class="role">
+              Founder & CEO
+            </div>
+
+            <p>
+              Leads Voxistar's overall vision, strategic direction
+              and long-term development, while overseeing major
+              initiatives and the continued growth of the platform.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- HALIMA -->
+
+        <article class="card">
+
+          <div class="photo-box">
+            <img
+              src="images/halima-akhtar.jpg"
+              alt="Halima Akhtar - Co-Founder of Voxistar"
+            >
+          </div>
+
+          <div class="card-content">
+
+            <h3>
+              Halima Akhtar
+            </h3>
+
+            <div class="role">
+              Co-Founder
+            </div>
+
+            <p>
+              Supports Voxistar's founding vision and contributes
+              to strategic planning, organizational development
+              and the continued growth of the platform.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- ALI -->
+
+        <article class="card">
+
+          <div class="photo-box">
+            <img
+              src="images/ali-raza.jpg"
+              alt="Ali Raza - Chief Operating Officer of Voxistar"
+            >
+          </div>
+
+          <div class="card-content">
+
+            <h3>
+              Ali Raza
+            </h3>
+
+            <div class="role">
+              Chief Operating Officer
+            </div>
+
+            <p>
+              Oversees operational coordination, internal management
+              and day-to-day organizational activities to support
+              efficient execution across Voxistar.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- SARA -->
+
+        <article class="card">
+
+          <div class="photo-box">
+            <img
+              src="images/sara.jpg"
+              alt="Sara - Voxistar Chief Representative"
+            >
+          </div>
+
+          <div class="card-content">
+
+            <h3>
+              Sara
+            </h3>
+
+            <div class="role">
+              Voxistar Chief Representative
+            </div>
+
+            <p>
+              Represents Voxistar in official communications
+              and community-facing activities, helping maintain
+              professional communication on behalf of the platform.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- DONALD -->
+
+        <article class="card">
+
+          <div class="photo-box">
+            <img
+              src="images/donald.jpg"
+              alt="Donald - Head of Community at Voxistar"
+            >
+          </div>
+
+          <div class="card-content">
+
+            <h3>
+              Donald
+            </h3>
+
+            <div class="role">
+              Head of Community
+            </div>
+
+            <p>
+              Focuses on community engagement, member relations
+              and maintaining a positive and welcoming environment
+              for Voxistar users and creators.
+            </p>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- OTHER MANAGEMENT -->
+
+  <section class="management-section">
+
+    <div class="container">
+
+      <div class="management-box">
+
+        <div class="management-title">
+
+          <h2>
+            Other Voxistar Official Team Management
+          </h2>
+
+          <p>
+            Supporting Voxistar across key areas of community,
+            creators, partnerships, technology and media.
+          </p>
+
+        </div>
+
+
+        <div class="management-grid">
+
+
+          <div class="management-card">
+
+            <h3>
+              Head of Creator Relations
+            </h3>
+
+            <p>
+              Supports communication and coordination with
+              creators, singers and hosts while developing
+              creator-focused initiatives.
+            </p>
+
+          </div>
+
+
+          <div class="management-card">
+
+            <h3>
+              Head of Partnerships
+            </h3>
+
+            <p>
+              Coordinates approved collaborations, partnerships
+              and professional relationships with external
+              organizations.
+            </p>
+
+          </div>
+
+
+          <div class="management-card">
+
+            <h3>
+              Product & Technology Lead
+            </h3>
+
+            <p>
+              Supports digital products, website development,
+              platform features and technology improvements.
+            </p>
+
+          </div>
+
+
+          <div class="management-card">
+
+            <h3>
+              Creative & Media Director
+            </h3>
+
+            <p>
+              Oversees creative presentation, branding,
+              promotional media and approved visual content.
+            </p>
+
+          </div>
+
+
+          <div class="management-card">
+
+            <h3>
+              Community Support Manager
+            </h3>
+
+            <p>
+              Assists users and supports community-related
+              operations, communication and user experience.
+            </p>
+
+          </div>
+
+
+          <div class="management-card">
+
+            <h3>
+              Official Team Management
+            </h3>
+
+            <p>
+              Supports the leadership team across organizational
+              coordination, platform activities and ongoing
+              Voxistar initiatives.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      © 2026 Voxistar. All rights reserved.
+
+    </div>
+
+  </footer>
+
+
+</body>
+            </html>
